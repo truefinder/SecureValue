@@ -1,6 +1,5 @@
 # SecureValue
--
-Let's protect our native games from casual hack with smartphone cheat tool app 
+Let's protect our native app games from casual cheat tools 
 
 ## Purpose 
 * Anti casual game cheat tools such as GameCIH, GameKiller, GameGuardian, ... 
@@ -9,7 +8,7 @@ Let's protect our native games from casual hack with smartphone cheat tool app
 
 ## How to apply 
 ### updated value to SecureVariable
-Heath point, Magic point, Speed, level, money, ... these are often variable, 
+Heath point, Magic point, Speed, level, money, ... these are often variables, 
 Then, apply SecureVariable 
 
 	// before 
@@ -21,7 +20,7 @@ Then, apply SecureVariable
 	hp = hp + 150 ; 
 
 ### fixed value to SecureFixed 
-Game speed (frame per second), Stage limit time, Boss Health point, ... are fixed variable ( not changed) 
+Game speed (frame per second), Stage limit time, Boss Health point, ... are fixed variables ( not changed) 
 In this case, you are recommended to apply SecureFixed 
 
 	// before 
@@ -32,7 +31,7 @@ In this case, you are recommended to apply SecureFixed
 	SecureFixed<float> fps = 80.0; 
 	SecureFixed<int> time_limit = 3600 ; 
 
-###	Result 
+###	Output 
 
 	sizeof int, long, float, long long, double : 4,4,4,8,8
 	Correct? limit_time : 60
