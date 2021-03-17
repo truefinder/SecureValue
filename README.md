@@ -52,7 +52,7 @@ $ make
 g++ -o main main.cpp -D_DEBUG_
 $ ./main
 *size of each short, int, long, float, long long, double : 2,4,8,4,8,8
-<unsigned int>=======================================================
+<unsigned int>================================================
 limit_time : 60
 typeinfo : j, sizeof : 4
 saved value (secure) : 301414822
@@ -60,39 +60,38 @@ saved value (secure) : 301414822
 main_fps (50.20) : 50.2
 typeinfo : f, sizeof : 4
 saved value (secure) : 1.64891e+12
-<int>=======================================================
+<int>==============--=========================================
 monster_hp (11090) : 11090
 typeinfo : i, sizeof : 4
-saved value (secure) : 297365035
-<int> calculation=======================================================
+saved value (secure) : 302151478
+<int> calculation=============================================
 monster_hp (11090 - 2948) : 8142
 typeinfo : i, sizeof : 4
-saved value (secure) : 297360055
+saved value (secure) : 302138282
 <float>=======================================================
 move_speed (20.33) : 20.33
 typeinfo : f, sizeof : 4
-saved value (secure) : 1.04623e+10
-<float> calculation =======================================================
+saved value (secure) : 1.38297e+12
+<float> calculation ==========================================
 move_speed (20.33+10) : 30.33
 typeinfo : f, sizeof : 4
-saved value (secure) : 1.36836e+10
+saved value (secure) : 2.07016e+12
 <short>=======================================================
 move (3) : 3
 typeinfo : s, sizeof : 2
-saved value (secure) : 17786
-<short> calculation =======================================================
+saved value (secure) : 23655
+<short> calculation ==========================================
 move_speed (3+5) : 8
 typeinfo : s, sizeof : 2
-saved value (secure) : 17777
-<double>=======================================================
+saved value (secure) : 23660
+<double>======================================================
 speed (1.2E-308) : 1.2e-308
 typeinfo : d, sizeof : 8
 saved value (secure) : 3.31263e+306
-<double> calculation =======================================================
+<double> calculation =========================================
 speed (1.2E-308 + 0.1E-308) : 1.3e-308
 typeinfo : d, sizeof : 8
 saved value (secure) : 3.36203e+306
-
 
 ```
 
