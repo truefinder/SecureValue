@@ -51,39 +51,46 @@ In this case, you are recommended to apply SecureFixed
 $ make
 g++ -o main main.cpp -D_DEBUG_
 $ ./main
-sizeof int, long, float, long long, double : 4,8,4,8,8
-Correct? limit_time : 60
-sizeof : 4
+*size of each short, int, long, float, long long, double : 2,4,8,4,8,8
+<unsigned int>=======================================================
+limit_time : 60
+typeinfo : j, sizeof : 4
 saved value (secure) : 301414822
-Correct? main_fps (50.20) : 50.2
-sizeof : 4
+<float>=======================================================
+main_fps (50.20) : 50.2
+typeinfo : f, sizeof : 4
 saved value (secure) : 1.64891e+12
-*GetSavedValue() :1.64891e+12
-Correct? monster_hp (-1090) : -1090
-sizeof : 4
-saved value (secure) : -259338143
-Correct? monster_hp (-1090 - 2948) : -4038
-sizeof : 4
-saved value (secure) : -259335195
-Correct? move_speed (20.33) : 20.33
-sizeof : 4
-saved value (secure) : 1.80801e+09
-Correct? move_speed (20.33+10) : 30.33
-sizeof : 4
-saved value (secure) : 1.13692e+09
-2 byte, 8byte test 
-Correct? move (3) : 3
-sizeof : 2
-saved value (secure) : 11228
-*GetSavedValue() :11228
-Correct? move_speed (3+5) : 8
-sizeof : 2
-saved value (secure) : 11223
-Correct? speed (1.2E-308) : 1.2e-308
-sizeof : 8
+<int>=======================================================
+monster_hp (11090) : 11090
+typeinfo : i, sizeof : 4
+saved value (secure) : 297365035
+<int> calculation=======================================================
+monster_hp (11090 - 2948) : 8142
+typeinfo : i, sizeof : 4
+saved value (secure) : 297360055
+<float>=======================================================
+move_speed (20.33) : 20.33
+typeinfo : f, sizeof : 4
+saved value (secure) : 1.04623e+10
+<float> calculation =======================================================
+move_speed (20.33+10) : 30.33
+typeinfo : f, sizeof : 4
+saved value (secure) : 1.36836e+10
+<short>=======================================================
+move (3) : 3
+typeinfo : s, sizeof : 2
+saved value (secure) : 17786
+<short> calculation =======================================================
+move_speed (3+5) : 8
+typeinfo : s, sizeof : 2
+saved value (secure) : 17777
+<double>=======================================================
+speed (1.2E-308) : 1.2e-308
+typeinfo : d, sizeof : 8
 saved value (secure) : 3.31263e+306
-Correct? speed (1.2E-308 + 0.1E-308) : 1.3e-308
-sizeof : 8
+<double> calculation =======================================================
+speed (1.2E-308 + 0.1E-308) : 1.3e-308
+typeinfo : d, sizeof : 8
 saved value (secure) : 3.36203e+306
 
 
