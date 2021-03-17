@@ -16,67 +16,74 @@
 #include "SecureVariable.h" 
 #include "SecureFixed.h" 
 
+
 using namespace std ;
 
 int main (void)
 {
 
 	// test fixed value 
-	SecureFixed<unsigned int> limit_time ;
-	SecureFixed<float> main_fps ; 
 
 	// test variable value 
-	SecureVariable<int> monster_hp ;
-	SecureVariable<float> move_speed ; 
 
 
-	cout<< "sizeof int, long, float, long long, double : "  ; 
-	cout<< sizeof(int) << "," << sizeof(long) <<"," << sizeof(float) << "," << sizeof(long long) << "," << sizeof(double) << endl ; 
+	cout<< "*size of each short, int, long, float, long long, double : "  ; 
+	cout<< sizeof (short) << "," << sizeof(int) << "," << sizeof(long) <<"," << sizeof(float) << "," << sizeof(long long) << "," << sizeof(double) << endl ; 
 
+	cout << "<unsigned int>=======================================================" << endl ;
+	SecureFixed<unsigned int> limit_time ;
 	limit_time = 60 ; 
-	cout << "Correct? limit_time : " << limit_time << endl ;
+	cout << "limit_time : " << limit_time << endl ;
 	limit_time.DebugPrint(); 
 
+	cout << "<float>=======================================================" << endl ;
+	SecureFixed<float> main_fps ; 
 	main_fps = 50.20 ; 
-	cout << "Correct? main_fps (50.20) : " << main_fps << endl ; 
+	cout << "main_fps (50.20) : " << main_fps << endl ; 
 	main_fps.DebugPrint() ; 
-	cout << "*GetSavedValue() :" << main_fps.GetSavedValue() << endl ; 
 
-	monster_hp = -1090 ; 
-	cout << "Correct? monster_hp (-1090) : " << monster_hp << endl ; 
+	cout << "<int>=======================================================" << endl ;
+	SecureVariable<int> monster_hp ;
+	monster_hp = 11090 ; 
+	cout << "monster_hp (11090) : " << monster_hp << endl ; 
 	monster_hp.DebugPrint() ; 
+	cout << "<int> calculation=======================================================" << endl ;
 	monster_hp = monster_hp - 2948 ; 
-	cout << "Correct? monster_hp (-1090 - 2948) : " << monster_hp << endl ; 
+	cout << "monster_hp (11090 - 2948) : " << monster_hp << endl ; 
 	monster_hp.DebugPrint() ; 
 
+	cout << "<float>=======================================================" << endl ;
+	SecureVariable<float> move_speed ; 
 	move_speed = 20.33 ;
-	cout << "Correct? move_speed (20.33) : " << move_speed << endl ; 
+	cout << "move_speed (20.33) : " << move_speed << endl ; 
 	move_speed.DebugPrint() ; 
+	cout << "<float> calculation =======================================================" << endl ;
 	move_speed = move_speed + 10  ; 
-	cout << "Correct? move_speed (20.33+10) : " << move_speed << endl ; 
+	cout << "move_speed (20.33+10) : " << move_speed << endl ; 
 	move_speed.DebugPrint() ; 
 
-	cout << "2 byte, 8byte test " << endl ; 
+
+	cout << "<short>=======================================================" << endl ;
 	SecureVariable<short> move ; 
 	move = 3 ;
-	cout << "Correct? move (3) : " << move << endl ; 
+	cout << "move (3) : " << move << endl ; 
 	move.DebugPrint() ; 
-	cout << "*GetSavedValue() :" << move.GetSavedValue() << endl ; 
 
+	cout << "<short> calculation =======================================================" << endl ;
 	move = move + 5  ; 
-	cout << "Correct? move_speed (3+5) : " << move << endl ; 
+	cout << "move_speed (3+5) : " << move << endl ; 
 	move.DebugPrint() ; 
 
+	cout << "<double>=======================================================" << endl ;
 	SecureVariable<double> speed; 
 	speed = 1.2E-308 ;
-	cout << "Correct? speed (1.2E-308) : " << speed << endl ; 
+	cout << "speed (1.2E-308) : " << speed << endl ; 
 	speed.DebugPrint() ; 
+	cout << "<double> calculation =======================================================" << endl ;
 	speed = speed + 0.1E-308  ; 
-	cout << "Correct? speed (1.2E-308 + 0.1E-308) : " << speed << endl ; 
+	cout << "speed (1.2E-308 + 0.1E-308) : " << speed << endl ; 
 	speed.DebugPrint() ; 
 
-
-	
 
 	return 0 ; 
 }

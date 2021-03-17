@@ -46,7 +46,7 @@ T SecureVariable<T>::GetSavedValue()
 template <typename T>
 void SecureVariable<T>::DebugPrint() 
 {
-	cout<< "sizeof : " << sizeof(T) << endl  ; 
+	cout<< "typeinfo : " <<  typeid(T).name()  << ", sizeof : " << sizeof(T) << endl  ; 
 	cout<< "saved value (secure) : " << (T)*secure << endl ; 
 }
 

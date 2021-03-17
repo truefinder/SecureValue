@@ -9,6 +9,7 @@
 #include <string>
 #include <memory>
 #include <ctime>
+#include <typeinfo>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

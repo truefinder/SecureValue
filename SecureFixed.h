@@ -60,7 +60,8 @@ void SecureFixed<T>::PrintBits(size_t const size, void const * const ptr)
 template <typename T>
 void SecureFixed<T>::DebugPrint() 
 {
-	cout<< "sizeof : " << sizeof(T) << endl  ; 
+
+	cout<< "typeinfo : " << typeid(T).name() << ", sizeof : " << sizeof(T) << endl  ; 
 	cout<< "saved value (secure) : " << (T)*secure << endl ; 
 }
 #endif
